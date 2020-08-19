@@ -1,0 +1,26 @@
+{
+  "name": "nodeless",
+  "version": "1.0.0",
+  "description": "",
+  "main": "optimize.js",
+  "dependencies": {
+    "sharp": "^0.25.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "predeploy": "rm -rf node_modules/sharp && npm install --platform=linux --arch=x64 --target=8.10.0 sharp",
+    "deploy": "serverless deploy -v",
+    "postdeploy": "rm -rf node_modules/sharp && npm install sharp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/felipe-ssilva/serverless-node-aws-lambda.git"
+  },
+  "keywords": [],
+  "author": "Felipe da Silva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/felipe-ssilva/serverless-node-aws-lambda/issues"
+  },
+  "homepage": "https://github.com/felipe-ssilva/serverless-node-aws-lambda#readme"
+}
